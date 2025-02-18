@@ -1,12 +1,7 @@
 result = ""
 
 input_number_1 = float(input("Enter first number:"))
-
 input_action = input("Enter action:")
-if len(input_action) != 1:
-    print("Error! You must enter only one character")
-    exit()
-
 input_number_2 = float(input("Enter second number:"))
 
 if input_action == "+":
