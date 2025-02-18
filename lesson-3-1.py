@@ -1,0 +1,28 @@
+result = ""
+
+input_number_1 = float(input("Enter first number:"))
+
+input_action = input("Enter action:")
+if len(input_action) != 1:
+    print("Error! You must enter only one character")
+    exit()
+
+input_number_2 = float(input("Enter second number:"))
+
+if input_action == "+":
+    result = input_number_1 + input_number_2
+elif input_action == "-":
+    result = input_number_1 - input_number_2
+elif input_action == "/":
+    if input_number_2 == 0:
+        print("Division by zero is not possible, please try again")
+        exit()
+    else:
+        result = input_number_1 / input_number_2
+elif input_action == "*":
+    result = input_number_1 * input_number_2
+
+if result % 1 == 0:
+    print(int(result))
+else:
+    print(result)
