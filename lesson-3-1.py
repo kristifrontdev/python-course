@@ -12,8 +12,7 @@ elif input_action == "/":
     if input_number_2 == 0:
         print("Division by zero is not possible, please try again")
         exit()
-    else:
-        result = input_number_1 / input_number_2
+    result = input_number_1 / input_number_2
 elif input_action == "*":
     result = input_number_1 * input_number_2
 
