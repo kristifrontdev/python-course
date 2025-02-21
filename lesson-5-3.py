@@ -18,11 +18,11 @@ string_limit = 140
 
 title_string = example_string.title()
 
-no_punctuation_spaces = "#" + "".join(
+res = "#" + "".join(
     char for char in title_string if char not in string.punctuation and char != " "
 )
 
-if len(no_punctuation_spaces) > string_limit:
-    no_punctuation_spaces = no_punctuation_spaces[:string_limit]
+if len(res) > string_limit:
+    res = res[:string_limit]
 
-print(no_punctuation_spaces)
+print(res)
