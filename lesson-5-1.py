@@ -44,4 +44,6 @@ validations_rules = [
     variable_input.startswith("_") and variable_input.count("_") > 1,
 ]
 
-print(not any([True in validations_rules]))
+is_valid = not any([True in validations_rules])
+
+print(is_valid)
