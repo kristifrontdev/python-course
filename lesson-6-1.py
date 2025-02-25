@@ -4,7 +4,7 @@
 
 import string
 
-user_input = "a-A"
+user_input = input("Enter: ")
 char1, char2 = user_input.split("-")
 
 char1_index = string.ascii_letters.find(char1)
