@@ -9,12 +9,9 @@
 # [] => 0
 
 example_list = [0, 1, 7, 2, 4, 8]
-sum = 0
+res = 0
 
 if len(example_list) > 0:
-    res = example_list[::2]
-    for num in res:
-        sum += num
-    sum *= example_list[-1]
+    res = sum(example_list[::2]) * example_list[-1]
 
-print(sum)
+print(res)

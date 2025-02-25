@@ -33,7 +33,8 @@
 import string
 import keyword
 
-variable_input = input("Enter variable name: ")
+# variable_input = input("Enter variable name: ")
+variable_input = "__test_"
 
 validations_rules = [
     variable_input[0].isdigit(),
@@ -41,9 +42,8 @@ validations_rules = [
     any([char in string.punctuation and char != "_" for char in variable_input]),
     any([char.isspace() for char in variable_input]),
     variable_input in keyword.kwlist,
-    variable_input.startswith("_") and variable_input.count("_") > 1,
+    len(variable_input) > 1 and all(char == "_" for char in variable_input),
 ]
 
 is_valid = not any([True in validations_rules])
-
 print(is_valid)
