@@ -20,7 +20,7 @@
 
 from collections import defaultdict, namedtuple
 
-user_input = 0
+user_input = int(input("Enter value: "))
 
 days_format_rules = [
   {
