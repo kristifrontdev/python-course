@@ -18,8 +18,6 @@
 
 # minute, hour, day = (60, 60 * 60, 24 * 60 * 60)
 
-from collections import defaultdict, namedtuple
-
 user_input = int(input("Enter value: "))
 
 days_format_rules = [
