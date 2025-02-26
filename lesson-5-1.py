@@ -33,8 +33,8 @@
 import string
 import keyword
 
-# variable_input = input("Enter variable name: ")
-variable_input = "__test_"
+variable_input = input("Enter variable name: ")
+# variable_input = "__test_"
 
 validations_rules = [
     variable_input[0].isdigit(),

@@ -15,3 +15,41 @@
 # 8639999 -> 99 днів, 23:59:59
 # 22493 -> 0 днів, 06:14:53
 # 7948799 -> 91 день, 23:59:59
+
+# minute, hour, day = (60, 60 * 60, 24 * 60 * 60)
+
+from collections import defaultdict, namedtuple
+
+user_input = 0
+
+days_format_rules = [
+  {
+		"rule": [1],
+		"text": "день"
+	},
+  {
+		"rule": [0] + list(range(2, 5)),
+		"text": "дні"
+	},
+  {
+		"rule": [0] + list(range(5, 10)),
+		"text": "днів"
+	}
+]
+days_format_exception = [0] + list(range(11, 20))
+
+res_days_int, hours_rest = divmod(user_input, 24 * 60 * 60)
+res_hours, minutes_rest = divmod(hours_rest, 60 * 60)
+res_minutes, res_seconds = divmod(minutes_rest, 60)
+
+res_days = None
+
+if res_days_int in days_format_exception:
+  res_days = f'''{res_days_int} {days_format_rules[2]["text"]}'''
+else: 
+  for item in days_format_rules:
+    if res_days_int % 10 in item["rule"]:
+      res_days = f'''{res_days_int} {item["text"]}'''
+      break
+    
+print(f'''{res_days} {str(res_hours).zfill(2)}:{str(res_minutes).zfill(2)}:{str(res_seconds).zfill(2)}''')
