@@ -11,9 +11,9 @@
 
 import math
 
-user_input = int(input("Enter value: "))
+user_input = input("Enter value: ")
 
-lst_input = [int(num) for num in str(user_input)]
+lst_input = [int(num) for num in user_input]
 
 iterations = []
 
