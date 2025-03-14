@@ -7,9 +7,10 @@
 def second_index(text, some_str): 
   
   first_index = text.find(some_str)
+  first_slice = first_index + 1
   
-  second_text_part = text[first_index+1:]
-  res = second_text_part.find(some_str) + first_index+1
+  second_text_part = text[first_slice:]
+  res = second_text_part.find(some_str) + first_slice
   
   return res if res > 0 else None
 
