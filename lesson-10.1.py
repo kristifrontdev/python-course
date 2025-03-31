@@ -10,7 +10,7 @@ def some_gen(begin, length, func):
     counter = 0
     while counter < length:
         yield res
-        res = pow(res)
+        res = func(res)
         counter += 1
 
 
