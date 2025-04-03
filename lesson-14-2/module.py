@@ -27,7 +27,11 @@ class Student(Human):
         return f"""{self.first_name} {self.last_name}, {self.gender}, {self.age} yo, {self.record_book}"""
 
     def __eq__(self, other):
-        return f"""{self.first_name} {self.last_name}"""
+        return (
+            f"""{self.first_name} {self.last_name}"""
+            if str(self) == str(other)
+            else False
+        )
 
     def __hash__(self):
         return hash(str(self))

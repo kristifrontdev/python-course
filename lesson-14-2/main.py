@@ -7,6 +7,7 @@ gr.add_student(st1)
 gr.add_student(st2)
 print(gr)
 assert gr.find_student("Jobs") == st1  # 'Steve Jobs'
+print(gr.find_student("Jobs") == st1)
 assert gr.find_student("Jobs2") is None
 
 gr.delete_student("Taylor")
