@@ -1,0 +1,8 @@
+Win CMD
+set PORT=5000 && set NODE_ENV=production && node app.js
+
+Win PS
+$env:PORT=5000; $env:NODE_ENV="production"; node app.js
+
+MacOS / Unix
+PORT=5000 NODE_ENV=production node app.js
