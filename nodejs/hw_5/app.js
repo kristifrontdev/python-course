@@ -1,5 +1,4 @@
 require("dotenv").config();
-const he = require("he");
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
