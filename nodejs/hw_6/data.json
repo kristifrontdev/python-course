@@ -1,0 +1,42 @@
+[
+  {
+    "username": "Кристина",
+    "text": "Hello",
+    "createdAt": 1751133432417
+  },
+  {
+    "username": "Kristina",
+    "text": "&lt;script&gt;console.log(&quot;1&quot;)&lt;/script&gt;",
+    "createdAt": 1751133453268
+  },
+  {
+    "username": "Kristi",
+    "text": "&lt;a onClick=&quot;() =&gt; console.log(&#x27;1&quot;)&quot;&gt;&lt;/a&gt;\r\n",
+    "createdAt": 1751133515790
+  },
+  {
+    "username": "Hello",
+    "text": "Kristina",
+    "createdAt": 1751133539785
+  },
+  {
+    "username": "Кристина",
+    "text": "Привет",
+    "createdAt": 1751133551358
+  },
+  {
+    "username": "Привет",
+    "text": "こんにちは",
+    "createdAt": 1751133582865
+  },
+  {
+    "username": "Kristi",
+    "text": "Hello 1",
+    "createdAt": 1751134078453
+  },
+  {
+    "username": "Kristina",
+    "text": "Hello morgan",
+    "createdAt": 1751134423953
+  }
+]

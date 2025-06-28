@@ -1,0 +1,14 @@
+GET /about 304 - - 207.212 ms
+GET /favicon.ico 304 - - 4.957 ms
+GET /about 304 - - 3.162 ms
+GET /favicon.ico 304 - - 1.785 ms
+GET /about 304 - - 2.512 ms
+GET /favicon.ico 304 - - 1.534 ms
+GET /about 304 - - 2.032 ms
+GET /favicon.ico 304 - - 1.907 ms
+GET /about 304 - - 1.864 ms
+GET /favicon.ico 304 - - 1.386 ms
+GET /about 304 - - 1.771 ms
+GET /favicon.ico 304 - - 1.521 ms
+::1 - - [27/Jun/2025:17:01:53 +0000] "GET /about HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::1 - - [27/Jun/2025:17:01:53 +0000] "GET /favicon.ico HTTP/1.1" 304 - "http://localhost:3050/about" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
