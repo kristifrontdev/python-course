@@ -1,0 +1,15 @@
+h2 Відгуки гостей
+
+if guests.length < 1
+	h3 No reviews yet
+
+a(href="/form") Leave a review
+br
+br
+each guest in guests.reverse()
+	div
+		p= moment(guest.createdAt).format("DD.MM.YYYY HH:mm")
+		p= guest.username
+		p(style="padding-left: 20px;")= guest.message
+		hr
+		
