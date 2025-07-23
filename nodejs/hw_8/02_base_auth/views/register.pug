@@ -1,0 +1,23 @@
+include header
+
+.container
+  h1 Register
+  if errors && Object.keys(errors).length > 0
+    for error in errors
+      p(style="color:red;margin-bottom: 0;")= error
+
+  form(method="POST" action="/register" style="margin-top: 20px;")
+    div
+      input(type="text" name="email" placeholder="Email" required)
+    div
+      input(type="password" name="password" placeholder="Password" required)
+    p.radio-group-label Choose your role
+    div.radio-group
+      input(type="radio" name="role" value="user" id="user" checked)
+      label(for="user") User
+    div.radio-group
+      input(type="radio" name="role" value="admin" id="admin")
+      label(for="admin") Admin
+    br
+    div
+      button(type="submit") Sign up
