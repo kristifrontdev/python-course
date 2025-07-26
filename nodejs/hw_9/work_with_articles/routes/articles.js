@@ -23,7 +23,12 @@ module.exports = function ({ articlesCollection }) {
       url,
       published: published === "on",
       createdAt: new Date(),
-      ...(tags && { tags: tags.split(",").map((tag) => tag.trim()) }),
+      ...(tags && {
+        tags: tags
+          .split(",")
+          .map((tag) => tag.trim())
+          .filter((tag) => tag !== ""),
+      }),
     });
     res.redirect("/articles");
   });
@@ -52,7 +57,12 @@ module.exports = function ({ articlesCollection }) {
           url,
           published: published === "on",
           updatedAt: new Date(),
-          tags: tags ? tags.split(",").map((tag) => tag.trim()) : [],
+          tags: tags
+            ? tags
+                .split(",")
+                .map((tag) => tag.trim())
+                .filter((tag) => tag !== "")
+            : [],
         },
       }
     );
