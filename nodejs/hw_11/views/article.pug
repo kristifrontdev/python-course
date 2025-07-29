@@ -1,0 +1,34 @@
+.container
+  h1= article.title
+  p= article.content
+  hr
+
+  if article.comments.length > 0
+    h3 Коментарі:
+    ul
+      each comment in article.comments
+        li
+          span= moment(comment.createdAt).format("DD.MM.YYYY HH:mm")	
+          | : 
+          | #{comment.text}
+          form(action=`/delete-comment/${article._id}/${comment._id}` method="POST")
+            button(type="submit") Delete
+  else
+    p Коментарів немає
+
+  hr
+  h3 Додати коментар:
+  form(action=`/create-comment/${article._id}` method="POST")
+    div
+      label(for="text") Текст:
+      br
+      br
+      textarea(name="text" id="text" rows="3" required)
+      br
+      br
+      label(for="visible") Visible?:
+      input(type="checkbox" name="visible" id="visible" checked)
+      br
+      br
+    div
+      button(type="submit") Submit
