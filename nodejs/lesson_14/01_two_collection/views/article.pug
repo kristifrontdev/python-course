@@ -1,0 +1,28 @@
+include header
+
+.container
+  h1= article.title
+  p= article.content
+  a(href="/articles/") ← Назад до списку
+
+  div
+    ul.pagination
+      if currentPage > 1
+        li
+          a(href=`?page=${currentPage - 1}`) Prev
+
+      each page in [...Array(totalPages).keys()].map(i => i + 1)
+        li(class= page === currentPage ? 'active' : '')
+          a(href=`?page=${page}`)= page
+      
+      if currentPage < totalPages
+        li
+          a(href=`?page=${currentPage + 1}`) Next
+
+  div 
+    each item in comments
+      div
+        div
+          a(href=`/comment/${item._id}`) #{item._id}
+        code= (new Date(item.createdAt)).toLocaleString()
+        p= item.text

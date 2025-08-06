@@ -1,0 +1,26 @@
+include header
+
+.container
+  h1= article._id ? 'Редагувати статтю' : 'Нова стаття'
+
+
+
+  form(method="POST", action=action)
+    div
+        input(type="text", name="title", placeholder="Заголовок", value=article.title || '')
+        if (error)
+            p(style="color: red")= details.title
+    div
+        input(type="text", name="url", placeholder="URL", value=article.url || '')
+        if (error)
+            p(style="color: red")= details.url
+    div
+        input(type="text", name="tags", id="tags", placeholder="Теги", pattern="^\\s*[a-zA-Z0-9]+(\\s*,\\s*[a-zA-Z0-9]+)*\\s*$", title="Вводьте теги через кому, тільки латинські букви та цифри", value=article.tags ? article.tags.join(', ') : '')
+    div
+        textarea(name="content")= article.content || ''
+    div
+        label
+            input(type="checkbox", name="published", checked=article.published)
+            | Опубліковано
+    div
+        button(type="submit") Зберегти

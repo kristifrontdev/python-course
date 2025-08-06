@@ -1,0 +1,14 @@
+.container
+  h1= __("main")
+  p= __("page")
+
+  for lang in langs
+    div
+      a(href=`/${lang}${clearPath}`) #{lang}
+
+  div
+    a(href=`/${lang}/page`) Article 2
+
+  p!= article.caption[lang]
+  p!= article.text[lang]
+  img(src=article.image, alt="" style="width: 200px")

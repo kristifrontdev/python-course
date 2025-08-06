@@ -1,0 +1,8 @@
+include header
+
+.container
+  h1= comment.article_id.title
+  p= comment.article_id.content
+  a(href=`/articles_1/${comment.article_id.url}`) ← Назад до списку
+  hr
+  p= comment.text

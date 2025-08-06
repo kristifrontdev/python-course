@@ -1,0 +1,13 @@
+include header
+
+.container
+    
+    h1 Main
+
+    each item in articles
+        div
+            h5
+                a(href=`/articles_1/${item.url}`)= item.title
+
+            div= item.prev
+            div Comments: #{commentsCount[item._id]}

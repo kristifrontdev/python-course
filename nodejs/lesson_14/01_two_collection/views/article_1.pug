@@ -1,0 +1,13 @@
+include header
+
+.container
+  h1= article.title
+  p= article.content
+  a(href="/articles/") ← Назад до списку
+  div 
+    each item in comments
+      div
+        div
+          a(href=`/comment/${item._id}`) #{item._id}
+        code= (new Date(item.createdAt)).toLocaleString()
+        p= item.text
